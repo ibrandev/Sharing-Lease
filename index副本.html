@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Sharing lease is a platform you can renting you want convenient.">
+        <meta name="author" content="">
+
+        <title>Sharing Lease | A platforn for renting.</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="http://www.honeyfi.com/stylesheets/bootstrap.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet">
+
+        <!-- Theme CSS -->
+        <link href="http://www.honeyfi.com/stylesheets/landing.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-80816762-1', 'auto');
+         ga('require', 'linkid');
+         ga('send', 'pageview');
+         
+         /**
+          * Function that tracks a click on an outbound link in Analytics.
+          * This function takes a valid URL string as an argument, and uses that URL string
+          * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+          * using 'navigator.sendBeacon' in browser that support it.
+          */
+         var trackOutboundLink = function(url) {
+             ga('send', 'event', 'outbound', 'click', url, {
+                 'transport': 'beacon',
+                 'hitCallback': function(){document.location = url;}
+             });
+         }
+         
+        </script>
+        <!-- Pinterest confirmation -->
+        <meta name="p:domain_verify" content="43ab6538907bcd94bbb661086a994128"/>
+
+        <style type="text/css">
+         html {
+             scroll-behavior: smooth;
+         }
+        </style>
+
+        <script type="text/javascript">
+         (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode".split(" "), 0);
+         branch.init("key_live_djDDEZWT912ltqjqskut5aejtDhUUHjw");
+         function sendSMS(form) {
+             console.log(form);
+             var phone = form.phone.value;
+             var linkData = {
+                 tags: [],
+                 channel: 'Website',
+                 feature: 'TextMeTheApp',
+                 data: {
+                     'inviteCode': 'WEBTX'
+                 }
+             };
+             var options = {};
+             var callback = function(err, result) {
+                 if (err) {
+                     alert("Sorry, something went wrong.");
+                 }
+                 else {
+                     alert("Text sent!");
+                 }
+             };
+             branch.sendSMS(phone, linkData, options, callback);
+             form.phone.value = "";
+         }
+        </script>
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="/"></a>
+                </div>
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse text-center">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a id="how-it-works" class="page-scroll" href="/#solution">How It Works</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="http://help.honeyfi.com">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="http://blog.honeyfi.com">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+            <script type="text/javascript">            
+             $(document).ready(function() {
+                 $('#how-it-works').click(function() {
+                     $('html, body').animate({
+                         scrollTop: $("#solution").offset().top
+                     }, 500);                 
+                     ga('send', 'event', 'button', 'click', 'how it works');
+                 });
+             });
+            </script>
+        </nav>
+        <!-- Intro Header -->
+        <header class="intro">
+            <div id="landing-intro" class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1 class="brand-heading">Couples' finances. Simplified.</h1>
+                            <p class="intro-text">A happier, healthier way to manage money with your partner.</p>
+
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 store-badge-div">
+                                    <a href="https://honeyfi.app.link/websiteios" onclick="trackOutboundLink('https://honeyfi.app.link/websiteios'); return false;">
+                                        <img src="/images/apple_badge.png" class="store-badge" alt="Download on the Apple App Store">
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 store-badge-div-2">
+                                    <a href="https://honeyfi.app.link/websiteandroid" onclick="trackOutboundLink('https://honeyfi.app.link/websiteandroid'); return false;">
+                                        <img src="/images/google_badge.png" class="store-badge" alt="Get it on Google Play">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <br>
+                            <br>
+
+                            <div id="beta-signup">
+                                <!-- Begin MailChimp Signup Form -->
+                                <p class="intro-text intro-text-2">Or give us your digits and we'll text you a download link.</p>
+                                <style type="text/css">
+                                 #embed_signup{clear:left; width:100%;}
+                                 /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                                    We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                                </style>
+                                <div id="embed_signup">
+                                    
+                                    <form id="embedded-subscribe-form" class="validate" title="" onsubmit="sendSMS(this); return false;">
+                                        <div id="embed_signup_scroll">
+                                            <input value="" name="phone" class="email" id="mce-EMAIL" type="tel" placeholder="(412) 867-5309" required>
+                                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                            <div class="clear"><input type="submit" id="embedded-subscribe" class="btn btn-landing beta-email-submit" value="Text me"></div>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                                <!--End mc_embed_signup-->
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a href="#solution" id="chevron-how-it-works">
+                                    <i class="fa fa-chevron-down chevron-icon" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Solution Section -->
+        <section id="solution" class="content-section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-offset-2 col-md-8">
+                        <h1>Welcome to Honeyfi, the first financial management app designed for couples from the ground up. Oh btw. It’s free.</h1>
+                    </div>
+                </div>
+                <div class="row feature-row-1">
+                    <div class="col-xs-12 col-sm-6 col-md-offset-2 col-md-4 col-lg-offset-3 col-lg-3 feature-text-left">
+                        <h2>Share</h2>
+                        <h3>Link your bank accounts and credit cards, choose what to share with your partner, and then see your household finances — organized and categorized — in one place.</h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 feature-screenshot">
+                        <img src="/images/transactions_phone.jpg" alt="share with your partner" class="screenshot">
+                    </div>
+                </div>
+                <div class="row feature-row">
+                    <div class="hidden-xs col-sm-6 col-md-offset-2 col-md-4 col-lg-offset-3 col-lg-3 feature-screenshot">
+                        <img src="/images/home_phone.jpg" alt="share with your partner" class="screenshot">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 feature-text-right">
+                        <h2>Collaborate</h2>
+                        <h3>Based on your previous spending, we suggest a shared budget, identify trends, and provide simple financial insights.</h3>
+                    </div>
+                    <div class="visible-xs col-xs-12">
+                        <img src="/images/home_phone.jpg" alt="share with your partner" class="screenshot">
+                    </div>
+                </div>
+                <div class="row feature-row">
+
+                    <div class="col-xs-12 col-sm-6 col-md-offset-2 col-md-4 col-lg-offset-3 col-lg-3 feature-text-left">
+                        <h2>Communicate</h2>
+                        <h3>Stay in sync with your partner by commenting on transactions, sharing the latest insights, and sending messages.</h3>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 feature-screenshot">
+                        <img src="/images/chat_phone.jpg" alt="share with your partner" class="screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section id="security" class="content-section text-center security-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 security-text">
+                        <i class="material-icons lock-icon">lock</i>
+                        <h2>Serious Security</h2>
+                        <h3>Honeyfi uses bank-level security to ensure that your sensitive personal information is secure and encrypted. We never store your banking credentials, and we work hard to keep our servers secure.</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="content-section text-center">
+            <div class="container">
+                <div class="row">
+                    <h1>With Honeyfi, you’re smarter, happier, and freer.</h1>
+                </div>
+
+                <!-- Desktop -->
+                <div class="row icon-row hidden-xs hidden-sm">
+                    <div class="col-md-4 benefits-padding">
+                        <i class="icon-eyeglass icons benefit-icons"></i>
+                    </div>
+                    <div class="col-md-4 benefits-padding">
+                        <i class="material-icons benefit-icons">looks</i>
+                    </div>
+                    <div class="col-md-4 benefits-padding">
+                        <i class="material-icons benefit-icons">motorcycle</i>
+                    </div>
+                </div>
+                <div class="row benefit-row hidden-xs hidden-sm">
+                    <div class="col-md-4 benefits-padding">
+                        <h2>Smarter</h2>
+                        <h3>By working as a team with your partner, you make smarter, more informed financial decisions.</h3>
+                    </div>
+                    <div class="col-md-4 benefits-padding">
+                        <h2>Happier</h2>
+                        <h3>By talking about money more and aligning your goals, you’re happier in your relationship.</h3>
+                    </div>
+                    <div class="col-md-4 benefits-padding">
+                        <h2>Freer</h2>
+                        <h3>By letting us crunch the numbers and pull your household finances into one place, you’re freer to do your thang.</h3>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="row benefit-row visible-xs visible-sm">
+                    <div class="col-xs-12 benefits-padding">
+                        <i class="icon-eyeglass icons benefit-icons"></i>
+                        <h2>Smarter</h2>
+                        <h3>By working as a team with your partner, you make smarter, more informed financial decisions.</h3>
+                    </div>
+                    <div class="col-xs-12 benefits-padding">
+                        <i class="material-icons benefit-icons">looks</i>
+                        <h2>Happier</h2>
+                        <h3>By talking about money more and aligning your goals, you’re happier in your relationship.</h3>
+                    </div>
+                    <div class="col-xs-12 benefits-padding">
+                        <i class="material-icons benefit-icons">motorcycle</i>
+                        <h2>Freer</h2>
+                        <h3>By letting us crunch the numbers and pull your household finances into one place, you’re freer to do your thang.</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="signup_2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Get the app.</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 store-badge-div">
+                            <a href="https://honeyfi.app.link/websiteios" onclick="trackOutboundLink('https://honeyfi.app.link/websiteios'); return false;">
+                                <img src="/images/apple_badge.png" class="store-badge" alt="Download on the Apple App Store">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 store-badge-div-2">
+                            <a href="https://honeyfi.app.link/websiteandroid" onclick="trackOutboundLink('https://honeyfi.app.link/websiteandroid'); return false;">
+                                <img src="/images/google_badge.png" class="store-badge" alt="Get it on Google Play">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div id="contact">
+                        <ul class="list-inline text-center social-row">
+                            <li><a href="http://www.facebook.com/honeyfiapp" target="_blank"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a></li>
+                            <li><a href="http://www.twitter.com/honeyfiapp" target="_blank"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.pinterest.com/honeyfiapp/" target="_blank"><i class="fa fa-pinterest-p fa-3x" aria-hidden="true"></i></a></li>
+                            <li><a href="http://www.instagram.com/honeyfiapp" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div id="policies">
+                        <ul class="list-inline text-center policies-row">
+                            <li><a href="/policies/terms">Terms of Use</a></li>
+                            <li><a href="/policies/privacy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row copyright-row">
+                    <div class="hidden-xs hidden-sm">
+                        <small>Copyright © 2017 Honeyfi, Inc. All rights reserved.</small>
+                    </div>
+                    <div class="visible-xs visible-sm col-xs-12 col-sm-12">
+                        <small>Copyright © 2017 Honeyfi, Inc.</small>
+                    </div>
+                    <div class="visible-xs visible-sm col-xs-12 col-sm-12">
+                        <small>All rights reserved.</small>
+                    </div> 
+                </div>
+                
+            </div>
+        </footer>
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script type="text/javascript" src="http://www.honeyfi.com/javascripts/bootstrap.min.js"></script>
+        
+        <!-- Font Awesome Fonts -->
+        <script src="https://use.fontawesome.com/ee142979e5.js"></script>
+        
+        <!-- Intercom -->
+        <script type="text/javascript">
+    	   /* Replace 'APP_ID' with your app ID */
+       	 window.intercomSettings = {
+        	   app_id: "bmeycv4t"
+    	   };
+       	 /* Replace 'APP_ID' with your app ID */
+       	 (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function")    {ic('reattach_activator');ic('update',intercomSettings);}else{var    d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args)   {i.q.push(args)};w.Intercom=i;function l(){var   s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/APP_ID';var x=d.getElementsByTagName('script')   [0];x.parentNode.insertBefore(s,x);}if(w.attachEvent)   {w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+        </script>
+        <script type="text/javascript">
+
+         $(document).ready(function() {
+
+             $('#chevron-how-it-works').click(function() {
+                 $('html, body').animate({
+                     scrollTop: $("#solution").offset().top
+                 }, 500);  
+             });
+
+             $('html,body').animate({
+                 scrollTop: $(window.location.hash).offset().top
+             }, 1800);
+
+
+         });
+
+        </script>
+
+        <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+        <!-- Theme JavaScript -->
+        <script src="http://www.honeyfi.com/javascripts/grayscale.js"></script>
+
+    </body>
+
+</html>
