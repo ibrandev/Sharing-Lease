@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="keywords" content="保镖,保安,培训,防卫,嚯嚯,Soloman,特卫,滴滴打人,huohuo,安全,旅游陪同,随身护卫,商务谈判,贵宾护送,儿童护送,秩序安保,北京,桔祥,桔祥科技,北京桔祥科技,滴滴,嚯嚯-Soloman特卫,旅游,商务,平安保险,生命线,公司"/>
+        <meta name="description" content="" />
+        <meta name="author" content="北京桔祥科技有限公司" />
+        <title>Soloman嚯嚯</title>
+        <link href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="http://soloman.org.cn/css/custom.css" rel="stylesheet" />
+   	    <script type="text/javascript" charset="utf-8" src="http://cdn.bootcss.com/jquery/3.0.0-rc1/jquery.min.js"></script>
+
+  	    <script type="text/javascript">
+
+    		 // 页面启动获取参数
+    		 $(document).ready(function(){
+             get_user_agreements();
+         })
+
+         // GET user_agreement
+         function get_user_agreements()
+         {
+             var result = $.get("http://api.soloman.org.cn/API/v2/homepages/user_agreement", {}, function(data){
+                 var qas = data.data.user_agreements;
+                 append_to_qa_list(qas);
+             }, "json");
+             return;
+         }
+
+         function append_to_qa_list(qas){
+             var qa_list_temp = '';
+             for(i = 0 ; i < qas.length ; i++){
+                 qa_list_temp += '<p class="' + qas[i].class_type + '">' + qas[i].content + '</p>';
+             }
+             $(qa_list_temp).appendTo(document.getElementById("qa_list"));
+         }
+
+        </script>
+    </head>
+    <body>
+        <div class="content qa" style="text-align:center">
+            <img class="img-responsive center-block" src="./img/new_logo.png" alt="new_logo">
+            <div id='qa_list'></div>
+            <p class="qa_more">更多问题请与我们联系。</p>
+            <img class="img-responsive center-block" src="./img/new_footer.png" alt="new_footer">
+        </div>
+    </body>
+</html>
